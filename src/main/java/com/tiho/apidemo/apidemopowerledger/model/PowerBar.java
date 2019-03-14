@@ -55,6 +55,6 @@ public class PowerBar implements Comparable<PowerBar> {
     public int compareTo(PowerBar x) {
         return energy < x.energy ? -1
                 : energy > x.energy ? 1
-                : 0;
+                : name.compareTo(x.name);
     }
 }
