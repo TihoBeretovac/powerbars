@@ -1,8 +1,8 @@
 package com.tiho.apidemo.apidemopowerledger;
 
 import com.tiho.apidemo.apidemopowerledger.model.PowerBar;
-import com.tiho.apidemo.apidemopowerledger.service.BubbleSort;
-import com.tiho.apidemo.apidemopowerledger.service.MergeSort;
+import com.tiho.apidemo.apidemopowerledger.sort.BubbleSort;
+import com.tiho.apidemo.apidemopowerledger.sort.MergeSort;
 import com.tiho.apidemo.apidemopowerledger.service.SortingService;
 import lombok.Getter;
 import org.junit.Test;

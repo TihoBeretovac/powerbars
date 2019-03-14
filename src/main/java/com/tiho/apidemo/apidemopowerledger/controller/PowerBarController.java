@@ -1,6 +1,5 @@
 package com.tiho.apidemo.apidemopowerledger.controller;
 
-import com.tiho.apidemo.apidemopowerledger.dao.PowerBarRepository;
 import com.tiho.apidemo.apidemopowerledger.dao.PowerBarSortResponse;
 import com.tiho.apidemo.apidemopowerledger.model.PowerBar;
 import com.tiho.apidemo.apidemopowerledger.model.SortType;
@@ -11,14 +10,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.server.ResponseStatusException;
+
+import java.util.ArrayList;
 import java.util.List;
 
 
 @RestController
 public class PowerBarController {
-
-    @Autowired
-    private PowerBarRepository repository;
 
     @Autowired
     private PowerBarServiceImpl service;
@@ -35,24 +33,23 @@ public class PowerBarController {
         try {
             long startTime = System.currentTimeMillis();
 
-            List<PowerBar> unsortedPowerBars = repository.findAll();
             List<PowerBar> sortedPowerBars;
 
             switch (sortType) {
                 case java:
-                    sortedPowerBars = service.javaSort(unsortedPowerBars);
+                    sortedPowerBars = service.javaSort();
                     break;
                 case stream:
-                    sortedPowerBars = service.streamSort(unsortedPowerBars);
+                    sortedPowerBars = service.streamSort();
                     break;
                 case bubble:
-                    sortedPowerBars = service.bubbleSort(unsortedPowerBars);
+                    sortedPowerBars = service.bubbleSort();
                     break;
                 case merge:
-                    sortedPowerBars = service.mergeSort(unsortedPowerBars);
+                    sortedPowerBars = service.mergeSort();
                     break;
                 default:
-                    sortedPowerBars = unsortedPowerBars;
+                    sortedPowerBars = service.javaSort();
                     break;
             }
 

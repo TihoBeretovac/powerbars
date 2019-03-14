@@ -12,29 +12,25 @@ public interface PowerBarService {
 
     /**
      * Sort the power bars using the default java sort implementation
-     * @param unsortedPowerBars the PowerBars to sort
      * @return the sorted PowerBars
      */
-    List<PowerBar> javaSort(List<PowerBar> unsortedPowerBars);
+    List<PowerBar> javaSort();
 
     /**
      * Sort the power bars using the default java streaming sort implementation
-     * @param unsortedPowerBars the PowerBars to sort
      * @return the sorted PowerBars
      */
-    List<PowerBar> streamSort(List<PowerBar> unsortedPowerBars);
+    List<PowerBar> streamSort();
 
     /**
      * Sort the power bars using the bubble sort implementation
-     * @param unsortedPowerBars the PowerBars to sort
      * @return the sorted PowerBars
      */
-    List<PowerBar> bubbleSort(List<PowerBar> unsortedPowerBars);
+    List<PowerBar> bubbleSort();
 
     /**
      * Sort the power bars using the merge sort implementation
-     * @param unsortedPowerBars the PowerBars to sort
      * @return the sorted PowerBars
      */
-    List<PowerBar> mergeSort(List<PowerBar> unsortedPowerBars);
+    List<PowerBar> mergeSort();
 }

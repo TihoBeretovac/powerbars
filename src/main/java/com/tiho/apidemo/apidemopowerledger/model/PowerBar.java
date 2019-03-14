@@ -1,5 +1,6 @@
 package com.tiho.apidemo.apidemopowerledger.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;
 
 import javax.persistence.Entity;
@@ -32,6 +33,7 @@ public class PowerBar implements Comparable<PowerBar> {
      */
     @NotNull
     @Getter @Setter
+    @JsonProperty("name")
     private String name;
 
     /**
@@ -39,6 +41,7 @@ public class PowerBar implements Comparable<PowerBar> {
      */
     @NotNull
     @Getter @Setter
+    @JsonProperty("energy")
     private Float energy;
 
     /**
