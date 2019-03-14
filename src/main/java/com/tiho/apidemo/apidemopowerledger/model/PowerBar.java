@@ -41,19 +41,8 @@ public class PowerBar implements Comparable<PowerBar> {
     @Getter @Setter
     private Float energy;
 
-//    public PowerBar() {
-//        super();
-//    }
-//
-//    public PowerBar(Long id, String name, Float energy) {
-//        super();
-//        this.id = id;
-//        this.name = name;
-//        this.energy = energy;
-//    }
-
     /**
-     * Arbitrary comparison of eah power bar (chosen to be by energy amount)
+     * Arbitrary comparison of each power bar (chosen to be by energy amount)
      * @param x the PowerBar being compared to
      * @return  a negative integer, zero, or a positive integer as this object
      *          is less than, equal to, or greater than the specified object.
