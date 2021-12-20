@@ -2,6 +2,8 @@
 
 ![Coverage](.github/badges/jacoco.svg)
 
+![Branches](.github/badges/branches.svg)
+
 A project hosting up an api for PowerBars (Energy Bars) and all their delicious goodness.
 Also used to demonstrate different sorting implementations (merge sort, bubble sort etc) 
 
