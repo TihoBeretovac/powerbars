@@ -3,9 +3,11 @@ package com.tiho.apidemo.apidemopowerledger;
 import com.tiho.apidemo.apidemopowerledger.model.PowerBar;
 import com.tiho.apidemo.apidemopowerledger.sort.BubbleSort;
 import com.tiho.apidemo.apidemopowerledger.sort.MergeSort;
+
+import org.junit.jupiter.api.Test;
+
 import com.tiho.apidemo.apidemopowerledger.service.SortingService;
 import lombok.Getter;
-import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
